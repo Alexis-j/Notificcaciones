@@ -14,6 +14,9 @@ import { NavLink } from "react-router-dom";
           title: "Login", path: "/login", icon: <InboxIcon />,
         },
         {
+          title: "Errorlog", path: "/errorlog", icon: <InboxIcon />,
+        },
+        {
           title: "Register", path: "/register", icon: <InboxIcon />,
         },
       ]

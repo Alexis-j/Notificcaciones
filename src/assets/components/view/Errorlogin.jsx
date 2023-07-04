@@ -1,19 +1,19 @@
-import { Box, Alert, AlertTitle, Snackbar, Button } from "@mui/material";
+import { Box, Alert, AlertTitle, Snackbar, Button, } from "@mui/material";
 import { useState } from "react";
 
-export default function Login() {
+export default function Errorlog() {
 
     const [open, setOpen] = useState(false)
 
   return (
   <>
-  <h1>Register</h1>
-  <Box sx={{display:"grid", gap: "1rem"}}>
+  <Box >
     <Button variant="contained"
       onClick={() => {
-      setOpen(true);
+        setOpen(true);
       }}
-    >open</Button>
+      >open error
+    </Button>
     <Snackbar open={open} autoHideDuration={1000} onClose={() => setOpen(false)}>
       <Alert severity="error">
         <AlertTitle>Error</AlertTitle>

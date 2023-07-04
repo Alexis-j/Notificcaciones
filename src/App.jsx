@@ -1,9 +1,11 @@
 import { Container } from "@mui/material";
 import Navbar from "./assets/components/navbar/Navbar";
 import Login from "./assets/components/view/login";
-import Register from "./assets/components/view/register";
+import Register from "./assets/components/view/Register";
 import Home from "./assets/components/view/Home";
 import { Route, Routes } from "react-router-dom";
+import ErrorLog from "./assets/components/view/Errorlogin";
+
 
 const navLinks = [
   {
@@ -12,11 +14,15 @@ const navLinks = [
   },
   {
     title: "Login",
-    path: "#login",
+    path: "/login",
+  },
+  {
+    title: "ErroLog",
+    path: "/src/assets/components/view/Errorlogin.jsx",
   },
   {
     title: "Register",
-    path: "#register",
+    path: "/src/assets/components/view/Register.jsx",
   },
 ];
 
@@ -27,8 +33,9 @@ export default function App() {
       <Container sx={{ mt: 5 }}>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/errorlog" element={<ErrorLog />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Container>
     </>
