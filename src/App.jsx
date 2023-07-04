@@ -1,8 +1,8 @@
 import { Container } from "@mui/material";
-import Navbar from "./components/navbar/Navbar";
-import Login from "./view/Login";
-import Register from "./view/Register";
-import Home from "./view/Home";
+import Navbar from "./assets/components/navbar/Navbar";
+import Login from "./assets/components/view/login";
+import Register from "./assets/components/view/register";
+import Home from "./assets/components/view/Home";
 import { Route, Routes } from "react-router-dom";
 
 const navLinks = [
