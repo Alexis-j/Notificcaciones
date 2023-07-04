@@ -6,7 +6,13 @@ export default function Login() {
     const {enqueueSnackbar} = useSnackbar()
 
     const handleClick = () => {
-      enqueueSnackbar("you are successfully logged in", {variant: "success"})
+      enqueueSnackbar("you are successfully logged in", {
+        variant: "success",
+        anchorOrigin: {
+          vertical: "bottom",
+          horizontal: "right"
+        },
+      })
     }
   return (
   <>
