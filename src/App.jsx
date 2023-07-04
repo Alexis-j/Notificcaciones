@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import Navbar from "./assets/components/navbar/Navbar";
+import  Navbar  from "./assets/components/navbar/Navbar";
 import Login from "./assets/components/view/login";
 import Register from "./assets/components/view/Register";
 import Home from "./assets/components/view/Home";
@@ -18,11 +18,11 @@ const navLinks = [
   },
   {
     title: "ErroLog",
-    path: "/src/assets/components/view/Errorlogin.jsx",
+    path: "/Errorlog.jsx",
   },
   {
-    title: "Register",
-    path: "/src/assets/components/view/Register.jsx",
+    title: "/Register",
+    path: "/Register.jsx",
   },
 ];
 

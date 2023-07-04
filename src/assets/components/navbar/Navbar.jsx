@@ -2,9 +2,8 @@ import { AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography, } from "@
 import NavListDrawer from "./NavListDrawer";
 import { useState } from "react";
 import MenuIconRounded from '@mui/icons-material/MenuRounded';
-import {InboxIcon } from "@mui/icons-material/Inbox";
+import InboxIcon from "@mui/icons-material/Inbox";
 import { NavLink } from "react-router-dom";
-
 
       const navLinks = [
         {

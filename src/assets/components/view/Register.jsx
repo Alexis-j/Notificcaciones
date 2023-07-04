@@ -1,33 +1,55 @@
 import { Box, Button, TextField } from "@mui/material";
-
+import { useState } from "react";
 
 export default function Register() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState({
+    error: false,
+    message: "",
+  });
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log("hello desde submit")
+  const validateEmail = (email) => {
+    const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return regex.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateEmail(email)) {
+      setError({
+        error: false,
+        message: "",
+      });
+      console.log("Email correcto");
+    } else {
+      setError({
+        error: true,
+        message: "Formato email incorrecto",
+      });
     }
-  return(
+  };
+
+  return (
     <>
-    <h1>register</h1>
-    <Box component="form" onSubmit={handleSubmit}>
-      <TextField
-        id="email"
-        label="Email"
-        type="email"
-        variant="outlined"
-        fullWidth
-        helperText="a@a.com"
-        error="true" 
-      >
-      </TextField>
-      <Button
-        type="submit"
-        variantq="outline"
-        sx={{ mt: 2 }}
-      >Registrame
-      </Button>
-    </Box>
+      <h1>register</h1>
+      <Box component="form" onSubmit={handleSubmit}>
+        <TextField
+          id="email"
+          label="Email"
+          type="email"
+          variant="outlined"
+          fullWidth
+          required
+          error={error.error}
+          helperText={error.message}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Button type="submit" variant="outlined" sx={{ mt: 2 }}>
+          Registrame
+        </Button>
+      </Box>
     </>
-  )
+  );
 }
+
