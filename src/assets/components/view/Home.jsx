@@ -1,5 +1,7 @@
 import { Alert, Box, AlertTitle, Button, Collapse } from "@mui/material";
 import { useState } from "react";
+import AddReactionIcon from '@mui/icons-material/AddReaction';
+
 
 export default function Home() {
 
@@ -25,7 +27,9 @@ export default function Home() {
         This is a warning alert — check it out!
       </Alert>
 
-      <Alert severity="info">
+      <Alert severity="info"
+        icon={<AddReactionIcon />}
+        variant="outlined">
         <AlertTitle>Info</AlertTitle>
         This is an info alert — check it out!
       </Alert>
